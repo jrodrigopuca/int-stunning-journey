@@ -1,0 +1,20 @@
+{
+  "name": "stunning-journey",
+  "version": "1.0.0",
+  "description": "Weather API",
+  "main": "src/app.js",
+  "repository": "https://github.com/jrodrigopuca/stunning-journey.git",
+  "author": "jarp <r@geeks.ms>",
+  "license": "Apache-2.0",
+  "private": false,
+  "scripts": {
+    "dev":"nodemon src/app.js",
+    "app": "node src/app.js"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.7"
+  }
+}
