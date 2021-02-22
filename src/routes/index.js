@@ -11,9 +11,5 @@ router.get('/', (req, res)=>{
 
 router.post('/location', controller.getLocation)
 
-/*(req, res)=>{
-    res.json(showResults(true,req.body));
-})*/
-
 
 module.exports = router
