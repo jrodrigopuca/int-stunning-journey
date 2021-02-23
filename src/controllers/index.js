@@ -12,7 +12,7 @@ const getLocation = async(req,res)=>{
     try {
         res.json(showResults(true,await getLocationService()));
     } catch (error) {
-        res.json(showResults(false,"Error en traer ubicación"))
+        res.status(400).json(showResults(false,"Error en traer ubicación"))
     }
 }
 
@@ -88,9 +88,9 @@ const getWeatherService= async(res,specialCity,days)=>{
                     }
                 ));
             })
-            .catch(error=>res.json(showResults(false,error.message)))
+            .catch(error=>res.status(400).json(showResults(false,error.message)))
         } catch (error) {
-            res.json(showResults(false,'consulta rechazada'))
+            res.status(400).json(showResults(false,'consulta rechazada'))
         }
 }
 

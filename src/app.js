@@ -3,7 +3,7 @@
  * @summary: API/REST para consultar clima, considerar:
  * - pronóstico actual (ciudad actual)
  * - próximos 5 días (ciudad actual)
- * - de otras 5 ciudades seleccionables
+ * - de otras ciudades seleccionables
  * - test
  */
 
@@ -34,3 +34,6 @@ app.listen(process.env.PORT, ()=>{
 })
 
 app.use('/v1', routes)
+
+
+module.exports= app;

@@ -8,7 +8,8 @@
   "license": "Apache-2.0",
   "private": false,
   "scripts": {
-    "dev":"nodemon src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "mocha test/test.js",
     "app": "node src/app.js"
   },
   "dependencies": {
@@ -16,5 +17,10 @@
     "express": "^4.17.1",
     "node-fetch": "^2.6.1",
     "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "mocha": "^8.3.0",
+    "should": "^13.2.3",
+    "supertest": "^6.1.3"
   }
 }
