@@ -14,6 +14,7 @@ const {port} = require('./config')
 const express = require('express');
 const bodyParser = require('body-parser');
 const routes = require('./routes')
+const path = require('path');
 
 //---------------- inicializar server-------------------------
 const app = express();
@@ -29,11 +30,12 @@ app.use((req, res, next) => {
     next();
 });
 
+
 app.listen(process.env.PORT, ()=>{
     console.info(`El server está funcionando en http://localhost:${port}`);
 })
 
 app.use('/v1', routes)
-
+app.use('/docs', express.static(path.join(__dirname, 'public'))) // mostrar documentación
 
 module.exports= app;
