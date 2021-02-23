@@ -8,5 +8,6 @@ dotenv.config();
 
 module.exports={
     port: process.env.PORT,
-    weatherKey: process.env.WEATHER_KEY
+    weatherKey: process.env.WEATHER_KEY,
+    serverUrl:process.env.SERVER_URL
 }
